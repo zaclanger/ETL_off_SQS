@@ -1,13 +1,13 @@
-ifeq (, $(shell which python3))
-$(error "python was not found in $(PATH). For installation instructions go to https://www.python.org/downloads/.")
+ifeq ('python3 not found', $(shell which python3))
+	$(error "python was not found in $(PATH). For installation instructions go to https://www.python.org/downloads/.")
 endif
 
-ifeq (, $(shell which docker))
-$(error "docker was not found in $(PATH). For installation instructions go to https://docs.docker.com/get-docker/.")
+ifeq ('docker not found', $(shell which docker))
+	$(error "docker was not found in $(PATH). For installation instructions go to https://docs.docker.com/get-docker/.")
 endif
 
-ifeq (, $(shell which docker-compose))
-$(error "docker-compose was not found in $(PATH). For installation instructions go to https://docs.docker.com/compose/install/.")
+ifeq ('docker-compose not found', $(shell which docker-compose))
+	$(error "docker-compose was not found in $(PATH). For installation instructions go to https://docs.docker.com/compose/install/.")
 endif
 
 
